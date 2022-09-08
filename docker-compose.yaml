@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  blog_node:
+    build: .
+    restart: always
+    volumes:
+      - .:/home/node/app
+    ports:
+      - 3500:3000
