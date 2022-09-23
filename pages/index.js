@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from '../components/Link';
 import styles from '../styles/Home.module.css';
 
 import { getAllPosts } from '../Utils/Posts/posts';
 
 export default function Home({ allPosts }) {
-	console.log(allPosts);
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -15,7 +15,7 @@ export default function Home({ allPosts }) {
 			</Head>
 			<h1>Home</h1>
 
-			{allPosts.map(({ title, excerpt, image }, index) => (
+			{allPosts.map(({ slug, title, excerpt, image }, index) => (
 				<div
 					key={index}
 					style={{
@@ -26,13 +26,15 @@ export default function Home({ allPosts }) {
 						height: '100%',
 					}}
 				>
-					<Image
-						src={image.src}
-						alt={image.description}
-						width={200}
-						height={200}
-					/>
-					<h2>{title}</h2>
+					<Link href={`/posts/${slug}`}>
+						<Image
+							src={image.src}
+							alt={image.description}
+							width={200}
+							height={200}
+						/>
+						<h2>{title}</h2>
+					</Link>
 					<p>{excerpt}</p>
 				</div>
 			))}
@@ -41,7 +43,7 @@ export default function Home({ allPosts }) {
 }
 
 export async function getStaticProps() {
-	const allPosts = getAllPosts(['title', 'excerpt', 'image']);
+	const allPosts = getAllPosts(['slug', 'title', 'excerpt', 'image']);
 	return {
 		props: { allPosts },
 	};
