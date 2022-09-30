@@ -1,4 +1,4 @@
-import Header from '../components/Header';
+// import Header from '../components/Header';
 import Head from '../components/Next/Head';
 import PostCard from '../components/PostCard';
 
@@ -13,7 +13,7 @@ export default function Home({ allPosts }) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<Header />
+			{/* <Header /> */}
 			{allPosts.map(({ slug, title, excerpt, image }, index) => (
 				<PostCard
 					key={index}
