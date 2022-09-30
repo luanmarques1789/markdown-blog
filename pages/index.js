@@ -1,4 +1,4 @@
-import Head from '../components/Head';
+import Head from '../components/Next/Head';
 import PostCard from '../components/PostCard';
 import styles from '../styles/Home.module.css';
 

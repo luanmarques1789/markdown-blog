@@ -1,5 +1,5 @@
-import Image from './Image';
-import Link from './Link';
+import Image from './Next/Image.jsx';
+import Link from './Next/Link.jsx';
 
 export default function PostCard({ index, slug, title, excerpt, image }) {
 	return (
