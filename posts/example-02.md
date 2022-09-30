@@ -7,9 +7,6 @@ tags: []
 author:
   name: Luan M. Marques
   picture:
-image:
-  src: '/assets/images/wide-image.jpeg'
-  description: 'Descrição imagem post example 01'
 ---
 
 # Título principal

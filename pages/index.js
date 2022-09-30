@@ -14,21 +14,15 @@ export default function Home({ allPosts }) {
 			</Head>
 
 			{/* <Header /> */}
-			{allPosts.map(({ slug, title, excerpt, image }, index) => (
-				<PostCard
-					key={index}
-					slug={slug}
-					title={title}
-					excerpt={excerpt}
-					image={image}
-				/>
+			{allPosts.map(({ slug, title, excerpt }, index) => (
+				<PostCard key={index} slug={slug} title={title} excerpt={excerpt} />
 			))}
 		</div>
 	);
 }
 
 export async function getStaticProps() {
-	const allPosts = getAllPosts(['slug', 'title', 'excerpt', 'image']);
+	const allPosts = getAllPosts(['slug', 'title', 'excerpt']);
 	return {
 		props: { allPosts },
 	};
