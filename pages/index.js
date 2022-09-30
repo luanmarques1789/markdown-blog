@@ -1,18 +1,19 @@
+import Header from '../components/Header';
 import Head from '../components/Next/Head';
 import PostCard from '../components/PostCard';
-import styles from '../styles/Home.module.css';
 
 import { getAllPosts } from '../Utils/Posts/posts';
 
 export default function Home({ allPosts }) {
 	return (
-		<div className={styles.container}>
+		<div className="">
 			<Head>
 				<title>Home</title>
 				<meta name="description" content="Home do site" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
+			<Header />
 			{allPosts.map(({ slug, title, excerpt, image }, index) => (
 				<PostCard
 					key={index}
