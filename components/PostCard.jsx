@@ -3,15 +3,7 @@ import Link from './Next/Link.jsx';
 
 export default function PostCard({ index, slug, title, excerpt, image }) {
 	return (
-		<div
-			style={{
-				marginBottom: '5px',
-				display: 'block',
-				backgroundColor: 'red',
-				width: '100%',
-				height: '100%',
-			}}
-		>
+		<div className="bg-blue-100">
 			<Link href={`/posts/${slug}`}>
 				<Image
 					src={image.src}
