@@ -1,12 +1,16 @@
 import { getAllPosts, getPostBySlug } from '../../Utils/Posts/posts';
 import markdownToHtml from '../../Utils/markdownParser';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 export default function Post({ post }) {
 	return (
-		<div>
+		<>
+			<Header />
 			<h1>{post.title}</h1>
 			<div dangerouslySetInnerHTML={{ __html: post.content }} />
-		</div>
+			<Footer />
+		</>
 	);
 }
 
