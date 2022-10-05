@@ -2,13 +2,13 @@ import { getAllPosts, getPostBySlug } from '../../Utils/Posts/posts';
 import markdownToHtml from '../../Utils/markdownParser';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import Article from '../../components/Article/Article';
 
 export default function Post({ post }) {
 	return (
 		<>
 			<Header />
-			<h1>{post.title}</h1>
-			<div dangerouslySetInnerHTML={{ __html: post.content }} />
+			<Article title={post.title} content={post.content}></Article>
 			<Footer />
 		</>
 	);

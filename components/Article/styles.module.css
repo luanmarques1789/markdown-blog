@@ -1,0 +1,23 @@
+.markdown h2,
+.markdown h3,
+.markdown p,
+.markdown blockquote,
+.markdown pre {
+	@apply my-8;
+}
+
+.markdown h2 {
+	@apply text-3xl mt-10;
+}
+
+.markdown p {
+	@apply indent-10 text-justify;
+}
+
+.markdown a {
+	@apply text-blue-300 hover:text-mavi-tone2;
+}
+
+.markdown pre code {
+	@apply block bg-[#011627] p-4 rounded-lg;
+}

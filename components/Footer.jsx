@@ -13,33 +13,45 @@ export default function Footer() {
 	};
 
 	const iconSize = 'h-6 w-6';
+	const footerStyle = [
+		'w-full',
+		'py-10',
+		'flex',
+		'flex-wrap',
+		'self-end',
+		'items-center',
+		'justify-center',
+	].join(' ');
 
 	return (
-		<footer className="w-full h-20 py-10 mt-5 flex flex-wrap self-end items-center justify-center">
-			<div className="w-full flex items-center justify-center">
-				<Link href={socialMedias.github} target="_blank">
-					<FontAwesomeIcon className={iconSize + ' mr-5'} icon={faGithub} />
-				</Link>
-				<Link href={socialMedias.email} target="_blank">
-					<FontAwesomeIcon className={iconSize + ' mr-5'} icon={faEnvelope} />
-				</Link>
-				<Link href={socialMedias.linkedin} target="_blank">
-					<FontAwesomeIcon className={iconSize} icon={faLinkedin} />
-				</Link>
-			</div>
-			<div className="mt-5">
-				<p>
-					Made with{' '}
-					<span className="inline-block">
-						<small>
-							<FontAwesomeIcon
-								className={`text-red-600	${iconSize}`}
-								icon={faHeart}
-							/>
-						</small>
-					</span>
-				</p>
-			</div>
-		</footer>
+		<div className="w-full mt-10">
+			<hr />
+			<footer className={footerStyle}>
+				<div className="w-full flex items-center justify-center">
+					<Link href={socialMedias.github} target="_blank">
+						<FontAwesomeIcon className={iconSize + ' mr-5'} icon={faGithub} />
+					</Link>
+					<Link href={socialMedias.email} target="_blank">
+						<FontAwesomeIcon className={iconSize + ' mr-5'} icon={faEnvelope} />
+					</Link>
+					<Link href={socialMedias.linkedin} target="_blank">
+						<FontAwesomeIcon className={iconSize} icon={faLinkedin} />
+					</Link>
+				</div>
+				<div className="mt-5">
+					<p>
+						Made with{' '}
+						<span className="inline-block">
+							<small>
+								<FontAwesomeIcon
+									className={`text-red-600	${iconSize}`}
+									icon={faHeart}
+								/>
+							</small>
+						</span>
+					</p>
+				</div>
+			</footer>
+		</div>
 	);
 }

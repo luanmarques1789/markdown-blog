@@ -4,9 +4,6 @@ excerpt: 'Resumo do post - Lorem Ipsum is simply dummy text of the printing and 
 publishedDate: ''
 updateDate: ''
 tags: []
-author:
-  name: Luan M. Marques
-  picture:
 ---
 
 # Título principal
