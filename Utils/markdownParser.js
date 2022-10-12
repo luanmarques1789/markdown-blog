@@ -1,4 +1,5 @@
 import { remark } from 'remark';
+import remarkGfm from 'remark-gfm';
 import html from 'remark-html';
 
 /**
@@ -7,6 +8,6 @@ import html from 'remark-html';
  * @returns rendered HTML content
  */
 export default async function markdownToHtml(markdown) {
-	const result = await remark().use(html).process(markdown);
+	const result = await remark().use(html).use(remarkGfm).process(markdown);
 	return result.toString();
 }
