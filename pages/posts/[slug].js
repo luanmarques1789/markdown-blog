@@ -3,17 +3,25 @@ import markdownToHtml from '../../Utils/markdownParser';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Article from '../../components/Article/Article';
+import PostsNavigation from '../../components/PostsNavigation/PostsNavigation';
 
-export default function Post({ post }) {
+/**
+ *
+ * @param {{post: Object, nextPost: String, previousPost: String}} props
+ * @returns
+ */
+export default function Post({ post, nextPost, previousPost }) {
 	return (
 		<>
 			<Header />
-			<Article title={post.title} content={post.content}></Article>
+			<Article title={post.title} content={post.content} />
+			<PostsNavigation previousPost={previousPost} nextPost={nextPost} />
 			<Footer />
 		</>
 	);
 }
 
+// Next.js will statically pre-render all the paths specified by it
 export async function getStaticPaths() {
 	const posts = getAllPosts(['slug']);
 
@@ -33,7 +41,21 @@ export async function getStaticProps({ params }) {
 	const post = getPostBySlug(params.slug, ['title', 'excerpt', 'content']);
 	const content = await markdownToHtml(post.content || '');
 
+	const allPosts = getAllPosts(['slug']);
+
+	// Converting array of objects to simple array
+	const slugs = allPosts.map(function (obj) {
+		return obj.slug;
+	});
+
+	const currentPost = slugs.indexOf(params.slug);
+
+	const nextPost = currentPost - 1 != -1 ? slugs.at(currentPost - 1) : null;
+
+	const previousPost =
+		currentPost + 1 < slugs.length ? slugs.at(currentPost + 1) : null;
+
 	return {
-		props: { post: { ...post, content } },
+		props: { post: { ...post, content }, nextPost, previousPost },
 	};
 }
