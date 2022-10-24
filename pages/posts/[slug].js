@@ -4,6 +4,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Article from '../../components/Article/Article';
 import PostsNavigation from '../../components/PostsNavigation/PostsNavigation';
+import Head from '../../components/Next/Head';
 
 /**
  *
@@ -13,6 +14,13 @@ import PostsNavigation from '../../components/PostsNavigation/PostsNavigation';
 export default function Post({ post, nextPost, previousPost }) {
 	return (
 		<>
+			<Head>
+				<script
+					id="MathJax-script"
+					async
+					src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+				></script>
+			</Head>
 			<Header />
 			<Article post={post} />
 			<PostsNavigation previousPost={previousPost} nextPost={nextPost} />
