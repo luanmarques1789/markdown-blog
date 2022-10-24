@@ -47,7 +47,7 @@ export async function getStaticProps({ params }) {
 	]);
 	const content = await markdownToHtml(post.content || '');
 
-	const allPosts = getAllPosts(['slug']);
+	const allPosts = getAllPosts(['slug', 'publishedDate']);
 
 	// Converting array of objects to simple array
 	const slugs = allPosts.map(function (obj) {
