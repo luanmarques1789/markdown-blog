@@ -51,7 +51,12 @@ export function getPostBySlug(slug, fields) {
  */
 export function getAllPosts(fields = []) {
 	const postFiles = getPostFiles();
-	const posts = postFiles.map((slug) => getPostBySlug(slug, fields));
+	const posts = postFiles
+		.map((slug) => getPostBySlug(slug, fields))
+		// sort posts by date in descending order
+		.sort((post1, post2) =>
+			post1.publishedDate > post2.publishedDate ? -1 : 1
+		);
 
 	return posts;
 }

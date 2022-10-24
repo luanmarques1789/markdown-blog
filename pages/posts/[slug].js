@@ -14,7 +14,7 @@ export default function Post({ post, nextPost, previousPost }) {
 	return (
 		<>
 			<Header />
-			<Article title={post.title} content={post.content} />
+			<Article post={post} />
 			<PostsNavigation previousPost={previousPost} nextPost={nextPost} />
 			<Footer />
 		</>
@@ -38,7 +38,13 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-	const post = getPostBySlug(params.slug, ['title', 'excerpt', 'content']);
+	const post = getPostBySlug(params.slug, [
+		'title',
+		'excerpt',
+		'content',
+		'publishedDate',
+		'updateDate',
+	]);
 	const content = await markdownToHtml(post.content || '');
 
 	const allPosts = getAllPosts(['slug']);

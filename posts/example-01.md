@@ -1,14 +1,26 @@
 ---
 title: 'Título do Post 01'
 excerpt: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
-publishedDate: ''
-updateDate: ''
-tags: []
+publishedDate: '2022-10-23T21:20:10.465Z' # format: YYYY-MM-DDTHH:mm:ss.sssZ (ISO 8601)
+updateDate: '2023-09-10T10:02:10.465Z'
+tags: ['php', 'laravel', 'composer']
 ---
 
 ## Título secundário
 
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
+```bash
+# create new migration
+php artisan migrate:make create_comments_table --create=comments
+
+# run database seed
+php artisan db:seed
+
+# create resource controller without the create or edit function when you use angularjs
+php artisan controller:make CommentController --only=index,store,destroy
+
+# create resource full route
+Route::resource('comments', 'CommentController');
+```
 
 ## Título secundário
 

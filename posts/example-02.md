@@ -1,7 +1,7 @@
 ---
 title: 'Título do Post 02'
 excerpt: 'Resumo do post - Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using'
-publishedDate: ''
+publishedDate: '2022-10-05T13:51:50-03:00' # format: YYYY-MM-DDTHH:mm:ss.sssZ (ISO 8601)
 updateDate: ''
 tags: []
 ---

@@ -1,7 +1,7 @@
 ---
 title: 'Título do Post 03'
 excerpt: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged"
-publishedDate: ''
+publishedDate: '2022-10-15T13:51:50-03:00' # format: YYYY-MM-DDTHH:mm:ss.sssZ (ISO 8601)
 updateDate: ''
 tags: []
 ---
