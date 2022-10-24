@@ -1,4 +1,4 @@
-import DateFormatter from '../dateFormatter';
+import DateFormatter from '../DateFormatter';
 import styles from './styles.module.css';
 
 const Title = ({ title }) => {
