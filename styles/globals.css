@@ -5,13 +5,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+	.to-sky-custom {
+		--tw-gradient-to: #0a4466;
+	}
+}
+
 html,
 body {
-	@apply h-screen bg-[#282C35];
+	@apply h-screen;
+	/* background */
+	@apply bg-gradient-to-tr bg-fixed from-[#0F172A] to-sky-custom;
 }
 
 #__next {
 	@apply h-screen  w-1/2 container flex flex-wrap mx-auto justify-center;
-	@apply text-white font-poppins;
+	@apply text-[#e2e8f0] font-poppins;
 	@apply max-w-screen-md w-3/4;
 }

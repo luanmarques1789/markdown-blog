@@ -14,9 +14,6 @@ const Brand = () => {
 					/>
 				</Link>
 			</div>
-			{/* <ul className="">
-				<li>Luan Marques</li>
-			</ul> */}
 		</div>
 	);
 };
@@ -25,7 +22,7 @@ export default function Header() {
 	const sourceCode = 'https://github.com/luanmarques1789/markdown-blog';
 
 	return (
-		<header className="w-full py-10 mb-6">
+		<header className="w-full text-white py-10 mb-6">
 			<nav className="w-full flex">
 				<Brand />
 				<div className="w-full flex items-center justify-end">
