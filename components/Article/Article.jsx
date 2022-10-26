@@ -7,7 +7,7 @@ const Title = ({ title }) => {
 
 export default function Article({ post }) {
 	return (
-		<article>
+		<article className="w-full">
 			<Title title={post.title} />
 			<div className="mb-4">
 				<small>

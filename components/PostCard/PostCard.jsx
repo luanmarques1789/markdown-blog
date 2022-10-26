@@ -7,7 +7,7 @@ const Title = ({ title }) => {
 
 export default function PostCard({ slug, title, excerpt, publishedDate }) {
 	return (
-		<div className="mb-10">
+		<div className="mb-10 w-full">
 			<div className="mb-2">
 				<Link href={`/posts/${slug}`}>
 					<Title title={title} />

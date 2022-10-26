@@ -10,7 +10,7 @@ const Brand = () => {
 						src={'/assets/images/photo2.jpg'}
 						alt="Circular avatar"
 						variant="circular"
-						size="lg"
+						size="xl"
 					/>
 				</Link>
 			</div>

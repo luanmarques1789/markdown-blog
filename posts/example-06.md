@@ -1,7 +1,7 @@
 ---
-title: 'Título do Post 05'
-excerpt: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-publishedDate: '2022-10-23T13:51:50-03:00' # format: YYYY-MM-DDTHH:mm:ss.sssZ (ISO 8601)
+title: 'Título do Post 06'
+excerpt: 'Resumo do post - Lorem Ipsum is simply dummy text.'
+publishedDate: '2022-10-26T15:51:50-03:00' # format: YYYY-MM-DDTHH:mm:ss.sssZ (ISO 8601)
 updateDate: ''
 tags: []
 ---
