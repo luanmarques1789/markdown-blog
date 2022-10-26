@@ -15,6 +15,8 @@ export default function Post({ post, nextPost, previousPost }) {
 	return (
 		<>
 			<Head>
+				<title>{post.title}</title>
+				<meta name="description" content={post.excerpt} />
 				<script
 					id="MathJax-script"
 					async
