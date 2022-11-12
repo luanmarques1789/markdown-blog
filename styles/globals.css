@@ -23,3 +23,15 @@ body {
 	@apply text-[#e2e8f0] font-poppins;
 	@apply max-w-screen-md w-3/4;
 }
+
+.not-found h1 {
+	@apply text-6xl text-center mb-10;
+}
+
+.not-found h2 {
+	@apply text-2xl mb-2;
+}
+
+.not-found a {
+	@apply text-blue-300 hover:text-mavi-tone2;
+}
